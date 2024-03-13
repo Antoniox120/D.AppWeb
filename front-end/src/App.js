@@ -1,11 +1,16 @@
-import logo from './logo.svg';
+import logo from './pmn.jpg';
 import './App.css';
+import { Button, Form } from 'react-bootstrap';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <Form.Label>Nombre</Form.Label>
+        <Form.Control type="text"></Form.Control>
+        <Button>Guardar</Button>
+        
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
