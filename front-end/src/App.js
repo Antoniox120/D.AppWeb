@@ -1,15 +1,18 @@
+import { useState } from 'react';
 import logo from './pmn.jpg';
 import './App.css';
-import { Button, Form } from 'react-bootstrap';
+import {Button, Form } from 'react-bootstrap';
+import PrimerFormulario from './crs_Component/PrimerFormulario';
 
 function App() {
+  const [personaNombre, setPersona] = useState ("Antonio");
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Form.Label>Nombre</Form.Label>
-        <Form.Control type="text"></Form.Control>
-        <Button>Guardar</Button>
+        <PrimerFormulario
+        personaNombre={personaNombre}/>
         
         <p>
           Edit <code>src/App.js</code> and save to reload.
